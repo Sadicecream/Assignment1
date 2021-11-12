@@ -1,6 +1,10 @@
+*{
+    margin: 0;
+    color: #575279;
+}
 .grid_body{
     display: grid;
-    grid-template-columns: 250px 1fr;
+    grid-template-columns: 20vw 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: 
     'header main';
@@ -9,7 +13,29 @@
 header{
     display: grid;
     grid-area: header;
-    background-color:green;
+    background-color: #f2e9de;
     height: 100vh;
 }
 
+main{
+    display: grid;
+    grid-area: main;
+    height: 100vh;
+    background-color: #fffaf3;
+    width: 100vw;
+}
+
+h1{
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.navbar{
+    font-size: 1.5rem;
+    list-style: none;
+    line-height: 2rem;
+}

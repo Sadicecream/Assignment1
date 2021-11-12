@@ -17,14 +17,6 @@ header{
     height: 100vh;
 }
 
-main{
-    display: grid;
-    grid-area: main;
-    height: 100vh;
-    background-color: #fffaf3;
-    width: 100vw;
-}
-
 h1{
     font-size: 2rem;
     margin-bottom: 10px;
@@ -38,4 +30,52 @@ nav{
     font-size: 1.5rem;
     list-style: none;
     line-height: 2rem;
+}
+
+main{
+    display: grid;
+    grid-area: main;
+    height: 100vh;
+    background-color: #fffaf3;
+    width: 100vw;
+}
+
+.existing_contact{
+    margin-top: 20px;
+    margin-left: 70px;
+    display: grid;
+    width: 33%;
+    height: 50%;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 30% 50% 20%;
+    grid-template-areas:
+        'Info Image'
+        'Info blank'
+        'Info blank';
+}
+
+.contact_info{
+    grid-area: Info;
+    margin-top: 10%;
+    list-style: none;
+    text-align: justify;
+    line-height: 3rem;
+}
+
+.existing_buttons{
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.button{
+    background-color: #56949f;
+    border-radius: 4px;
+    min-width: 50px;
+}
+
+img{
+    grid-area: Image;
+    border-radius: 100%;
+    width: 150px;
 }

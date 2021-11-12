@@ -21,6 +21,7 @@ a{
     display: flex;
     text-align: center;
     justify-content: space-between;
+    padding-right: 5%;
 }
 
 .button{
@@ -139,7 +140,7 @@ input[type="text"]{
 }
 
 .create_contact{
-    max-width: 33%;
+    width: 33%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -151,4 +152,18 @@ input[type="text"]{
     border-style: none;
     font-weight: 800;
     font-size: 1.5rem;
+}
+
+@media only screen and (max-width:600px) {
+    .grid_body{
+        grid-template-columns: 1fr;
+        grid-template-rows: 20% 1fr;
+        grid-template: 
+            'header'
+            'main';
+    }
+    header{
+        padding: 0;
+        flex-direction: row;
+    }
 }

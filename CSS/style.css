@@ -18,7 +18,7 @@ header{
 }
 
 h1{
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 10px;
 }
 nav{
@@ -37,18 +37,20 @@ main{
     grid-area: main;
     height: 100vh;
     background-color: #fffaf3;
-    width: 100vw;
+    width: 100%;
+    padding-left: 70px;
 }
 
 .existing_contact{
     margin-top: 20px;
-    margin-left: 70px;
     display: grid;
     width: 33%;
-    height: 50%;
+    min-height: 25vh;
+    max-height: 50vh;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 30% 50% 20%;
+    grid-template-rows: 20px 3fr 5fr 2fr;
     grid-template-areas:
+        'margin Image'
         'Info Image'
         'Info blank'
         'Info blank';
@@ -56,26 +58,64 @@ main{
 
 .contact_info{
     grid-area: Info;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: space-evenly;
+    }
+
+/*.contact_info{
+    grid-area: Info;
+    display: flex;
+    flex-direction: column;
     margin-top: 10%;
     list-style: none;
     text-align: justify;
-    line-height: 3rem;
-}
+    align-items: center;
+}*/
 
-.existing_buttons{
+.button_line{
     display: flex;
     text-align: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .button{
     background-color: #56949f;
     border-radius: 4px;
-    min-width: 50px;
+    padding: 5px 10px;
+}
+
+.close{
+    background-color: #9893a5;
+}
+
+.cancel{
+    background-color: #b4637a;
 }
 
 img{
     grid-area: Image;
     border-radius: 100%;
-    width: 150px;
+    max-width: 150px;
+    overflow: hidden;
+    min-height: 150px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.create_contact{
+    margin-top: 20px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: space-around;
+    max-height: 50vh;
+}
+
+input[type="text"]{
+    height: 1.5rem;
 }

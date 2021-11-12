@@ -1,78 +1,19 @@
 *{
     margin: 0;
     color: #575279;
+    height: fit-content;
 }
 .grid_body{
     display: grid;
-    grid-template-columns: 20vw 1fr;
+    grid-template-columns: 20% 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: 
     'header main';
 }
 
-header{
-    display: grid;
-    grid-area: header;
-    background-color: #f2e9de;
-    height: 100vh;
+a{
+    text-decoration: none;
 }
-
-h1{
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-nav{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.navbar{
-    font-size: 1.5rem;
-    list-style: none;
-    line-height: 2rem;
-}
-
-main{
-    display: grid;
-    grid-area: main;
-    height: 100vh;
-    background-color: #fffaf3;
-    width: 100%;
-    padding-left: 70px;
-}
-
-.existing_contact{
-    margin-top: 20px;
-    display: grid;
-    width: 33%;
-    min-height: 25vh;
-    max-height: 50vh;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 20px 3fr 5fr 2fr;
-    grid-template-areas:
-        'margin Image'
-        'Info Image'
-        'Info blank'
-        'Info blank';
-}
-
-.contact_info{
-    grid-area: Info;
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    justify-content: space-evenly;
-    }
-
-/*.contact_info{
-    grid-area: Info;
-    display: flex;
-    flex-direction: column;
-    margin-top: 10%;
-    list-style: none;
-    text-align: justify;
-    align-items: center;
-}*/
 
 .button_line{
     display: flex;
@@ -86,36 +27,106 @@ main{
     padding: 5px 10px;
 }
 
+
+
+/*Navbar*/
+header{
+    display: grid;
+    grid-area: header;
+    background-color: #f2e9de;
+    height: 100%;
+}
+
+h1{
+    font-size: 3rem;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.navbar{
+    font-size: 1.5rem;
+    list-style: none;
+    line-height: 2rem;
+}
+
+
+
+/*Contents Area*/
+main{
+    display: grid;
+    grid-area: main;
+    height: 100vh;
+    background-color: #fffaf3;
+    width: 100%;
+    padding-left: 70px;
+    padding-top: 40px;
+}
+
+.contact_img{
+    grid-area: Image;
+    clip-path: circle();
+    width: 150px;
+    height: auto;
+}
+
+
+/*Display Contacts*/
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 5vw);
+    grid-gap: 15px;
+}
+.gallery_box{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+/*Existing Contact Information*/
+.existing_contact{
+    display: grid;
+    width: 33%;
+    max-height: 50%;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 30px 3fr 5fr 2fr;
+    grid-template-areas:
+        'offset Image'
+        'Info Image'
+        'Info blank'
+        'Info blank';
+}
+
+.contact_info{
+    grid-area: Info;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
 .close{
     background-color: #9893a5;
+}
+
+
+/*Creating Contact*/
+input[type="text"]{
+    height: 1.5rem;
 }
 
 .cancel{
     background-color: #b4637a;
 }
 
-img{
-    grid-area: Image;
-    border-radius: 100%;
-    max-width: 150px;
-    overflow: hidden;
-    min-height: 150px;
-}
-
-a{
-    text-decoration: none;
-}
-
 .create_contact{
-    margin-top: 20px;
     width: 20%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-content: space-around;
-    max-height: 50vh;
-}
-
-input[type="text"]{
-    height: 1.5rem;
+    max-height: 50%;
 }
